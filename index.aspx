@@ -1,19 +1,18 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="Login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-
-   <meta charset="utf-8"/>
+<head id="Head1" runat="server">
+    <meta charset="utf-8"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
       <!-- site metas -->
-      <title>rhino</title>
+      <title>EMAILO</title>
       <meta name="keywords" content=""/>
-      <meta name="description" content=""/>~
+      <meta name="description" content=""/>
       <meta name="author" content=""/>
       <!-- bootstrap css -->
       <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -22,19 +21,17 @@
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css"/>
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="images/email.png" type="image/x-icon" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"/>
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen"/>
-    <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen"/>  
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-         <!-- loader  -->
+              <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#"/></div>
       </div>
@@ -93,12 +90,10 @@
                                           
                                        </li>
                                        <li class="nav-item">
-                                           <asp:HyperLink ID="HyperLink2" class="nav-link" Text="Login" NavigateUrl="Login.aspx" runat="server"></asp:HyperLink>
+                                           <asp:HyperLink ID="HyperLink2" class="nav-link" Text="Login" NavigateUrl="index.aspx" runat="server"></asp:HyperLink>
                                           
                                        </li>
-                                        <li class="nav-item">
-                                            <asp:HyperLink ID="HyperLink1" class="nav-link" Text="Edit Profile" NavigateUrl="editProfile.aspx" runat="server"></asp:HyperLink>
-                                       </li>
+                                       
                                     </ul>
                                  </div>
                                  
@@ -112,11 +107,57 @@
          </div>
           </header>
          <!-- end header inner -->
-         <!-- end header -->
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+         <!-- end header -->    
+
         
-        </asp:ContentPlaceHolder>
-           <!--  footer -->
+         <!--  LOGIN Text start -->
+     <div class="back_re">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="title">
+                     <h2>Login</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    <!--  LOGIN Text End here -->
+      <!--  LOGIN Form starts -->
+   <div class="card ">
+     <div class="card-body">
+      <div class="contact">
+         <div class="container w-50">
+            <div class="row">
+               <div class="col-md-12 padding_right0">
+                  <div id="request" class="main_form">
+                     <div class="row">
+                        
+                        <div class="col-md-12">
+                           <asp:TextBox class="contactus border border-warning" style="color:black"   placeholder="Email" ID="TextBox1" runat="server"></asp:TextBox>
+                        </div>
+                       
+                          <div class="col-md-12">
+                           <asp:TextBox class="contactus border border-warning" style="color:black"  TextMode="Password" placeholder="Password" ID="TextBox2" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="col-md-12">
+
+                            <asp:Button ID="Button1" class="send_btn" style="margin-left:auto;margin-right:auto"  runat="server" Text="Login" OnClick="Button1_Click" />
+
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+                 </div>
+         </div>
+      </div>
+         </div>
+       </div>
+         <!--  LOGIN Form ends -->
+
+        
+         
          <!--  footer -->
       <footer>
          <div class="footer">
@@ -124,6 +165,7 @@
                 </div>
              </div>
           </footer>
+        <!--  footer  end-->
     </div>
     </form>
      <!-- Javascript files-->
@@ -135,3 +177,4 @@
       <script src="js/custom.js"></script>
 </body>
 </html>
+

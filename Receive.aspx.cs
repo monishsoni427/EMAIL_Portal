@@ -36,6 +36,6 @@ public partial class Receive : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("Login.aspx");
+        Response.Redirect("index.aspx");
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
-public partial class Compose : System.Web.UI.Page
+public partial class compose: System.Web.UI.Page
 {
     SqlConnection con;
     SqlCommand cmd;
@@ -46,6 +46,6 @@ public partial class Compose : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("Login.aspx");
+        Response.Redirect("index.aspx");
     }
 }

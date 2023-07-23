@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
-public partial class Default2 : System.Web.UI.Page
+public partial class Register: System.Web.UI.Page
 {
     SqlConnection con;
     SqlCommand cmd;
@@ -36,13 +36,13 @@ public partial class Default2 : System.Web.UI.Page
                 string s = "insert into Register values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "')";
                 cmd = new SqlCommand(s, con);
                 cmd.ExecuteNonQuery();
-                Response.Write("<script language='javascript'>window.alert('Successfully Registered');window.location='Login.aspx';</script>");
+                Response.Write("<script language='javascript'>window.alert('Successfully Registered');window.location='Compose.aspx';</script>");
             }
             else
             {
                
                     
-                    Response.Write("<script language='javascript'>window.alert('User already Exist Please Login');window.location='Login.aspx';</script>");
+                    Response.Write("<script language='javascript'>window.alert('User already Exist Please Login');window.location='index.aspx';</script>");
                 
             }   
         }
